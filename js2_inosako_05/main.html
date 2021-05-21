@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ポートフォリオ</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+
+
+<div class="center">
+    <!--/* プロフィール写真 */ -->
+    <div class="profile_img">
+        <img id="profile_back" src="img/1500x500.jpeg" alt=""><br>
+        <img id="profile_home" src="img/yBXGdJoI_400x400.jpg" alt="">
+    </div>
+
+    <!-- プロフィール欄 -->    
+    <div class="profile">
+        <table id="profile_main">
+            <!-- ここに名前データが挿入される -->
+            <tbody><tr><th>Name</th><td id="profile_name"></td></tr>
+                    <tr><th>Goal</th><td id="profile_goal"></td></tr></tbody></table>    
+        <textarea name="" id="profile_profile" cols="30" rows="10"></textarea>
+        <div class="home">
+            <table id="home_main">
+            <tr><th id="home_deploy"></th><td>件のdeploy</td></tr></tbody></table> 
+        </div>
+    </div>
+
+
+
+    <!-- タブ -->
+    <div class="tabs">
+        <input id="all" type="radio" name="tab_item" checked>
+        <label class="tab_item" for="all">日記</label>
+        <input id="programming" type="radio" name="tab_item">
+        <label class="tab_item" for="programming">メモ</label>
+        <input id="design" type="radio" name="tab_item">
+        <label class="tab_item" for="design">FYI</label>
+
+    <!-- タブ欄 ここにdeployが溜まっていく -->
+    <div class="tab_content" id="diary_content">
+        <table id="list_diary">
+        <!-- 日記データが挿入される -->
+        <tbody><tr><th></th><td></td></tr><tr><th></th><td></td></tr></tbody></table>
+
+    </div>
+    <div class="tab_content" id="memo_content">
+        <table id="list_memo">
+        <!-- メモデータが挿入される -->
+        <tbody><tr><tr></tr><td></td></tr><tr><th></th><td></td></tr></tbody></table>
+    </div>
+    <div class="tab_content" id="fyi_content">
+        <table id="list_fyi">
+        <!-- fyiデータが挿入される -->
+        <tbody><tr><tr></tr><td></td></tr><tr><th></th><td></td></tr></tbody></table>
+    </div>
+    </div>
+</div>
+
+<!-- モーダルウィンドウ -->
+<div class="modal">
+    <div class="modal-content">
+        <div class="modal-body">
+            <input type="text" id="key">
+            <textarea id="memo"></textarea>
+            <ul>
+                <li id="save_diary">Save Diary</li>
+                <li id="save_memo">Save Memo</li>
+                <li id="save_fyi">Save FYI</li>
+                <li id="clear">Clear</li>
+            </ul>
+        </div>
+        <button id="modal_clear_btn">✖️</button>
+
+    </div>
+</div>
+
+<!-- 左列 -->
+<div class="left">
+<ul class="float">
+        <img src="img/2021 Twitter logo - blue.png" alt="">
+        <li><a href="profile.html"><button id="home_btn">
+            Home
+        </button></a></li>
+        <li><button id="deploy_find_btn">
+            Explore Deploy
+        </button></li>
+        <li><button id="good_btn">
+            Explore Profile
+        </button></li>
+        <li><button id="goal_btn">
+            Explore Goal
+        </button></li>
+        <li><button id="diploy_btn">
+            Deploy
+        </button></li>
+    </ul>
+</div>
+
+<!-- 右列 -->
+<div class="right">
+    <div class="right-content">
+            <!-- タブ欄 ここにdeployが溜まっていく -->
+    <div class="right_list" id="right_list">
+        <table id="right_list_deploy">
+        <!-- 日記データが挿入される -->
+        <tbody><tr><th></th><td></td></tr><tr><th></th><td></td></tr></tbody></table>
+
+    </div>
+
+
+    </div>
+</div>
+
+   
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+
+
+</body>
+</html>
